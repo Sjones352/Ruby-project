@@ -1,14 +1,16 @@
 require 'logger'
 
+# This is a class method that describes the name,
+# gender and location of person
 class Person
   attr_accessor :location, :name, :gender
 
-  def initialize(name, gender)
+  def initialize(name, _gender)
     @logger = Logger.new($stdout)
     @name = name
-    @location = "Home"
-    @gender = "female"
-    @logger.debug ("Person:new instance created")
+    @location = 'Home'
+    @gender = 'female'
+    @logger.debug('Person:new instance created')
   end
 
   def say_hi
