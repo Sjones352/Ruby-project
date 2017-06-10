@@ -5,7 +5,7 @@ require 'logger'
 class Person
   attr_accessor :location, :name, :gender
 
-  def initialize(name, gender)
+  def initialize(name, _gender)
     @logger = Logger.new($stdout)
     @name = name
     @location = 'Home'

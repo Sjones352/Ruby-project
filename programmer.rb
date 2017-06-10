@@ -9,7 +9,7 @@ class Programmer < Person
   def self.input
     program = Programmer.new(ARGV[0])
     program.person = ARGV[1]
-    return program
+    [program]
   end
 
   def program(other_name)
@@ -17,9 +17,6 @@ class Programmer < Person
   end
 end
 
-#Programmer.input.program
-bob = Programmer.new('jones','female')
+bob = Programmer.new('jones', 'female')
 bob.program('sandra')
 bob.say_hi
-
-
