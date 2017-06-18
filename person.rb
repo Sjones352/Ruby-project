@@ -5,11 +5,11 @@ require 'logger'
 class Person
   attr_accessor :location, :name, :gender
 
-  def initialize(name, _gender)
+  def initialize(name, gender)
     @logger = Logger.new($stdout)
     @name = name
     @location = 'Home'
-    @gender = 'female'
+    @gender = gender
     @logger.debug('Person:new instance created')
   end
 
