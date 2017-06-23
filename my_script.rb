@@ -7,5 +7,4 @@ programmer2_name = ARGV[2]
 
 # The script then creates a new instance of Programmer using the programmer 1 information
 programmer = Programmer.new(programmer1_name, programmer1_gender)
-# programmer.program(programmer2_name)
-programmer.validate(programmer2_name)
+programmer.program(programmer2_name) 
