@@ -13,15 +13,20 @@ class Programmer < Person
    
   # checks for name, gender,other name and prints a missing plus file name
   def validate?(other_name)
-    if @name.nil? || @gender.nil? || other_name.nil?
+    if @name.nil? && @gender.nil? && other_name.nil?
       puts "Oops! Missing programmer1 name, programmer 1 gender, and programmer 2 name"
-      puts "usage: #{$PROGRAM_NAME} programmer-1-name programmer-1-gender programmer-2-gender" 
+      puts "usage: #{$PROGRAM_NAME} programmer-1-name programmer-1-gender programmer-2-name" 
       return false
+    elsif @name.nil? || @gender.nil? 
+      puts "Oops! Missing programmer 1 gender, and programmer 2 name"
+      puts "usage: #{$PROGRAM_NAME} programmer-1-name programmer-1-gender programmer-2-name" 
+      return false
+    elsif @name.nil? != other_name.nil?
+      puts "Oops! Missing programmer programmer 2 name"
+      puts "usage: #{$PROGRAM_NAME} programmer-1-name programmer-1-gender programmer-2-name"
+      return false 
     end
-
     return true
-
-
   end
 end
 
