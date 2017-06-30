@@ -19,8 +19,9 @@ class Programmer < Person
     # After looking at all conditions, if the error array is not empty
     #      output a message that contains a concatenation of all the messes in the array
     #      exit with error
+
     errors = []
-    errors.push(" Missing programmer1 name") if @name.nil?
+    errors.push(" Missing programmer1 name") if @name == other_name
     errors.push(" Missing programmer1 gender") if @gender.nil?
     errors.push(" Missing programmer2 name") if other_name.nil?
     if !errors.empty?
