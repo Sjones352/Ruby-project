@@ -7,9 +7,7 @@
     #      exit with error
 
 
-  class Print 
 
-<<<<<<< HEAD
 class Print 
   def self.disp(boolean1, boolean2)
   	puts "Boolean 1: #{boolean1}"
@@ -38,23 +36,3 @@ class Print
 end
 
 Print.disp(ARGV[0], ARGV[1])
-
-
-=======
-  def self.disp(boolean_1, boolean_2)
-    if boolean_1 == boolean_2
-    puts "Missing boolean value 1"
-    puts "Missing boolean value 2"
-   elsif (boolean_1.to_s !=  boolean_2.to_s )
-    warn "#{boolean_1} is not a valid boolean value"
-    warn "#{boolean_2} is not a valid boolean value"
-    elsif boolean1.nil?
-      warn "#{boolean_1} is not a valid boolean value"
-    else
-        puts "you are very wrong"
-    end
-  end
-end
-
-Print.disp(ARGV[0], ARGV[1])
->>>>>>> 722be7033dc9282751989427ab56ed2fb6d6077c
