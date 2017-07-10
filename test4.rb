@@ -9,7 +9,7 @@ class Print
     elsif boolean1.nil?
       errors.push("you did not pass me any arguments.")
     elsif boolean1.to_s == boolean1
-      errors.push("I don't like Strings")
+      errors.push("I don't like Strings Sandra.")
     end
 
     if !errors.empty?
