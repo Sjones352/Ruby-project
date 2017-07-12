@@ -1,12 +1,18 @@
-    boolean1 = ARGV[0]
+    user_input = ARGV[0]
 
-    if boolean1.is_a? (Integer)
-      puts "You passed #{boolean1}"
+    error = []
+
+    if ARGV.is_a? (Integer)
+      puts "You passed #{ARGV}"
     end
-    if  boolean1.nil?
+    if  user_input.nil?
       puts "you did not pass me any arguments."
     end
-    if   boolean1.is_a? (String)
-      puts "I don't like Strings ."
+    if   user_input.is_a? (String)
+     error.push("I don't like Strings.")
   end
-    
+  
+  if !error.empty?
+      warn "Errors encountered:\n" + error.join("\n")
+      exit 1
+  end

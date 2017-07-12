@@ -4,7 +4,7 @@
 
     if boolean3.nil?
       puts "nice Work"
-    elsif boolean3.kind_of?(String)
+    elsif boolean3.is_a?(String)
       errors.push("The value you entered #{boolean3} is not correct")
     end
 
