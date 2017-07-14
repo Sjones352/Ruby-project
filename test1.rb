@@ -1,7 +1,7 @@
-  boolean1 = ARGV[0]
+  value1 = ARGV[0]
     
-    if boolean1 == "true"
-      puts "The value is '#{boolean1}'"
-    elsif boolean1.nil?
+    if value1 == "true"
+      puts "The value is '#{value1}'"
+    else value1.nil?
       puts "Boolean value missing"
     end

@@ -1,18 +1,19 @@
-    user_input = ARGV[0]
+  def display(val)
 
-    error = []
+  errors = []
 
-    if ARGV.is_a? (Integer)
-      puts "You passed #{ARGV}"
+   if val != "0" && val.to_i != 0
+      puts "you passed the number #{val}."
+   elsif val.nil?   
+     puts "you did not pass any arguments"             
+   else (val.is_a? String)
+     errors.push("I do not like strings. Try again!") 
     end
-    if  user_input.nil?
-      puts "you did not pass me any arguments."
-    end
-    if   user_input.is_a? (String)
-     error.push("I don't like Strings.")
-  end
   
-  if !error.empty?
-      warn "Errors encountered:\n" + error.join("\n")
+   if !errors.empty?
+      warn "Errors encountered:\n" + errors.join("\n")
       exit 1
-  end
+    end
+end
+
+print display(ARGV[0])

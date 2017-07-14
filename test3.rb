@@ -1,11 +1,11 @@
-    boolean3 = ARGV[0]
+    val3 = ARGV[0]
         
     errors = []
 
-    if boolean3.nil?
+    if val3.nil?
       puts "nice Work"
-    elsif boolean3.is_a?(String)
-      errors.push("The value you entered #{boolean3} is not correct")
+    else val3.is_a?(String)
+      errors.push("The value you entered #{val3} is not correct")
     end
 
     if !errors.empty?
