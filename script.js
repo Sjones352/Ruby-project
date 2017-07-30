@@ -1,6 +1,3 @@
-// This means that you must declare strict mode by writing "use strict" 
-// at the beginning of the file or the function to use block-scope declarations.
-
 
 var value = process.argv[2];
 
