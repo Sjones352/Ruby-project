@@ -4,7 +4,7 @@
 
     if val3.nil?
       puts "nice Work"
-    else val3.is_a?(String)
+    else 
       errors.push("The value you entered #{val3} is not correct")
     end
 

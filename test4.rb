@@ -8,7 +8,7 @@
      puts "you did not pass any arguments"             
    else (val.is_a? String)
      errors.push("I do not like strings. Try again!") 
-    end
+  end
   
    if !errors.empty?
       warn "Errors encountered:\n" + errors.join("\n")
