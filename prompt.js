@@ -1,27 +1,42 @@
-var stdin = process.stdin, stdout = process.stdout;
+var t1 = "myVar";               // defined
+var t2;                          // undefined
+var t3 = process.argv[2];
+var num = Number.parseInt(t3);
+var t4 = 7;
+                        
 
-console.log('please enter a value?');
+if (t1 === undefined) {
+    console.log("t1 is undefined");
+} 
+else {
+    console.log("t1 is defined") ;
+}
 
-stdin.resume();
-stdin.setEncoding('utf8');
+if (t2 === undefined) {
+    console.log("t2 is undefined");
+} 
+else {
+   console.log('t2 is defined') ;
+}
 
-stdin.on('data', function (data) {
+// in JavaScript null is "nothing". It is supposed to be something that doesn't exist.
 
-  data = data.toString().trim();
-  var result = (data === "true" || data === "false");
+// in Unfortunately, in JavaScript, the data type of null is an object.
 
-    if (!data || data === '') {
-     stdout.write("You didn't enter anything ");
-    }
-    else if (!isNaN(Number.parseInt(data))){
-     stdout.write("value entered is ${data} ");
-    }
-    else if (result) {
-     sstdout.write("You entered a boolean ${data}");
-    }
-    else {
-     stdout.write("You entered  ${data} ");
-    }
-    process.exit();
-});
+if (!t3) {
+    console.log("t3 is null");
+} 
+else if (!isNaN(num)) {
+    console.log('t3 is', t3);
+}
 
+// Comparisons 
+
+// This is true because they are of the same type
+if (t4 === 7) {   
+   console.log ("This is true" , t4);
+}
+// returns false because they are not of the same type.
+else if (t4 == '7') {
+	console.log ("This is false" );
+}
