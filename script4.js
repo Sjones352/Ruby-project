@@ -1,3 +1,4 @@
+  'use strict';
 
  var check = function display(value) {
    var errors = [];
@@ -15,7 +16,7 @@
   }
     
     if (errors.length) {
-     console.log(errors.join(" "));
+     console.log(errors.join(''));
     }
   };
 

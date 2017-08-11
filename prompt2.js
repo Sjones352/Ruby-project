@@ -1,11 +1,17 @@
 /*jshint esversion: 6 */ 
-
 'use strict';
+
+var spawn = require('child_process');
+
 var stdin = process.stdin, stdout = process.stdout;
 
-console.log('please enter a value?');
-
 stdin.setEncoding('utf8');
+
+function showPrompt(stream) {
+  stream.write('sandrash$ ');    
+}
+
+showPrompt(stdout);
 
 stdin.on('data', function (data) {
 
@@ -22,9 +28,7 @@ stdin.on('data', function (data) {
      stdout.write(`You entered the boolean ${data} `);
     }
     else {
-     stdout.write(`You passed me a string ${data} `);
+     stdout.write(spawn.execSync(data));
     }
-    process.exit();
+    showPrompt(stdout);
 });
-
-
