@@ -14,14 +14,11 @@ stdin.on('data', function (data) {
 
     if (!data || data === '') {
      stdout.write(`You gave me nothing `);
-    }
-    else if (!isNaN(Number.parseInt(data))){
+    } else if (!isNaN(Number.parseInt(data))){
      stdout.write(`you entered the integer is ${data} `);
-    }
-    else if (result) {
+    } else if (result) {
      stdout.write(`You entered the boolean ${data} `);
-    }
-    else {
+    } else {
      stdout.write(`You passed me a string ${data} `);
     }
     process.exit();

@@ -20,14 +20,11 @@ rl.question('Enter your first name ', (answer) => {
   if (!answer || answer === '') {
      showPrompt(rl);
      rl.write(`You gave me nothing `);
-    }
-    else if (!isNaN(Number.parseInt(answer))){
+  } else if (!isNaN(Number.parseInt(answer))){
      rl.write(`you entered the integer is ${answer} `);
-    }
-    else if (result) {
+  } else if (result) {
      rl.write(`You entered the boolean ${answer} `);
-    }
-    else {
+  } else {
      rl.write(spawn.execSync(answer));
     }
     showPrompt(rl);
