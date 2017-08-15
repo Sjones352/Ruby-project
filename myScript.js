@@ -1,3 +1,5 @@
+'use strict'; 
+
 var value = process.argv[2];
 
 var errors = [];
@@ -21,4 +23,3 @@ if (!value) {
  if (!errors.length) {
  	 console.log(errors.join(''));
  }
-
