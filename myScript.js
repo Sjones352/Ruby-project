@@ -1,4 +1,4 @@
-'use strict'; 
+'use strict';
 
 var value = process.argv[2];
 
@@ -9,17 +9,16 @@ if (!value) {
   console.log(errors);
 
 } else if (value !== 'true' && value !== 'false') {
-   errors.push('Boolean value missing');
-   console.log(errors);
- } else if(value === 'false') {
-}else {
+  errors.push('Boolean value missing');
+  console.log(errors);
+} else if (value === 'false') {} else {
   // (value == 'true') 
   console.log('value is', value);
   process.exit(1);
 
- }
- 
- 
- if (!errors.length) {
- 	 console.log(errors.join(''));
- }
+}
+
+
+if (!errors.length) {
+  console.log(errors.join(''));
+}
