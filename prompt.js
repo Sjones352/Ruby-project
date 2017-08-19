@@ -1,3 +1,5 @@
+'use strict';
+
 var t1 = 'myVar'; // defined
 var t2; // undefined
 var t3 = process.argv[2];
