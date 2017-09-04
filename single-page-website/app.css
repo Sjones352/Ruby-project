@@ -7,6 +7,9 @@
     height: auto;
     -webkit-filter: blur(0px);
     width: 1330px !important;
+    font-size: 1.6rem;
+    overflow-wrap: break-word;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 .head {
@@ -23,89 +26,16 @@
     font-weight: 200;
 }
 
-.header div span {
-    color: #F29E20 !impotant;
-}
-
-.login {
-    position: absolute;
-    top: calc (50% - 75px);
-    left: calc(50% - 50px);
-    height: 150px;
-    width: 350px;
-    padding: 10px;
-
-}
-
-.login input [type=text] {
-    width: 250px;
-    height: 30px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 2px;
-    color: #fff;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 4px;
-}
-
-.login input [type=password] {
-    width: 250px;
-    height: 30px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 2px;
-    color: #fff;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 4px;
-}
-
-.login input [type=button] {
-   width: 260px;
-    height: 35px;
-    background: #fff;
-    border: 1px solid #fff;
-    cursor: pointer;
-    border-radius: 2px;
-    color: #fff;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 6px;
-    margin-top: 10px;
-}
-
-.login input [type=button]:hover {
+.button-border:hover {
     opacity: 0.8;
 }
 
-.login input [type=button]:active {
+.button-border:active {
     opacity: 0.6;
 }
 
-.login input [type=text]:focus {
+.button-border:focus {
     outline: none;
-    border: 1px solid rgba(255,255,255,0.9);
-}
-
-.login input [type=password]:focus {
-    outline: none;
-    border: 1px solid rgba(255,255,255,0.9);
-}
-
-.login input [type=button]:focus {
-    outline: none;
-}
-
-::-webkit-input-placeholder {
-    color: rgba(255,255,255,0.6);
- }
-::-moz-input-placeholder {
-    color: rgba(255,255,255,0.6);
-
 }
 
 .container-l {
@@ -367,7 +297,7 @@ body {
 
 .features{
     background: url(https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAoLAAAAJDRjYjhjNDZmLWViOTctNDZkNC1iY2Y4LTMwNDAxYWFhYWMyZA.jpg) no-repeat 0 15px;
-    padding-left: 250px;
+    padding-left: 350px;
 }
 
 .logo {
@@ -380,11 +310,37 @@ body {
 }
 
 .button-border {
-    background-color: #0071bc !important;
+    background-color: #f68b1f !important;
     width: 36% !important;
     line-height: 1;
     outline: none;
     padding: 1rem 2rem;
     font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; 
     border-color: transparent !important;
+    margin: 0 0.6rem 1rem 0
+}
+
+.content-color {
+    background-color: #f1f6f9 !important;
+    margin-top: 40px;
+}
+
+.logos{
+   background: url(http://qtxasset.com/styles/breakpoint_sm_default_480px_w/s3fs/2017-01/Doctor_Computer_and_Gadgets_800.png?HuJJQpE1dTGlbMrz0B1SSWAwszf_cD7k&itok=nUiEqi5O);
+   background-position: center;
+   background-repeat: no-repeat;
+}
+.feature-content {
+    background: url(https://www.allyhealth.net/wp-content/uploads/2014/02/telemedicine.jpg) no-repeat 0 15px;
+    padding-left: 350px;
+    padding-bottom: 350px;
+
+}
+
+.text-type {
+    font-style: italic;
+}
+
+.cf-color-divider {
+   background: #f2f2f2;
 }
