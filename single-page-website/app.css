@@ -3,10 +3,7 @@
     top: -20px;
     right: -40px;
     bottom: -40px;
-    width: auto;
-    height: auto;
-    -webkit-filter: blur(0px);
-    width: 1330px !important;
+    width: 100% !important;
     font-size: 1.6rem;
     overflow-wrap: break-word;
     font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -259,10 +256,7 @@
 
 
 .containers {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 90% !important;
 }
 
 .features{
