@@ -120,12 +120,6 @@
 
 }
 
-.form-textinput {
-    max-width: 47.9rem;
-    width: 45.9rem;
-    color: #323a45;
-    height: 15rem;
-}
 
 .cf-btn-segment {
     margin-bottom: 30px
@@ -169,10 +163,6 @@
    color:blue !important;
 }
 
-body {
-  font-family: 'Raleway' sans-serif;
-}
-
 .cf-logo-image-default {
   background-image: url(asset-path('health_logo.svg'));
   width: 32px;
@@ -186,7 +176,6 @@ body {
   height: 32px;
   background-size: 32px 32px;
 }
-
 
 .container-lg {
     max-width: 1012px;
@@ -228,18 +217,6 @@ body {
     margin-bottom: 8px !important;
 }
 
-.lead {
-    margin-bottom: 30px;
-    font-size: 20px;
-    font-weight: 300;
-    color: #586069;
-}
-
-.mx-auto {
-    margin-right: auto !important;
-    margin-left: auto !important;
-}
-
 .col-md-8 {
     width: 66.66667%;
 }
@@ -260,17 +237,13 @@ body {
 }
 
 .content.container {
-
     position: relative;
-
 }
+
 .nobottommargin {
-
     margin-bottom: 0 !important;
-
 }
 .topmargin {
-
     margin-top: 50px !important;
 
 }
@@ -284,9 +257,6 @@ body {
     padding-bottom: 30px;
 }
 
-.content.home {
-    padding-top: 50px;
-}
 
 .containers {
     padding-right: 15px;
@@ -326,9 +296,14 @@ body {
 }
 
 .logos{
-   background: url(http://qtxasset.com/styles/breakpoint_sm_default_480px_w/s3fs/2017-01/Doctor_Computer_and_Gadgets_800.png?HuJJQpE1dTGlbMrz0B1SSWAwszf_cD7k&itok=nUiEqi5O);
+   background: url(https://www.memd.me/wp-content/themes/memd.me/library/images/memd.me/xbanner2.png.pagespeed.ic.tgyGaQ2Z36.png) no-repeat center center;
    background-position: center;
    background-repeat: no-repeat;
+   background-size: cover;
+   color: #fff;
+   text-align: center;
+   width: 100% !important;
+   border-radius: 0 !important;
 }
 .feature-content {
     background: url(https://www.allyhealth.net/wp-content/uploads/2014/02/telemedicine.jpg) no-repeat 0 15px;
@@ -339,8 +314,48 @@ body {
 
 .text-type {
     font-style: italic;
+    font-size: 22px;
 }
 
-.cf-color-divider {
-   background: #f2f2f2;
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 20px;
+
+}
+.form-content {
+  width: 40% !important;
+  background-color: #005C8B;
+  margin: 1% auto 5% auto;
+  border: 1px solid #888;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-down: 25px;
+  padding-bottom: 25px;
 }

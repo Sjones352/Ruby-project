@@ -7,11 +7,12 @@
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300"/>
    <meta charset="utf-8"/>
    <title>American Care</title>
+   <link rel="shortcut icon" type="image/png" href="favicon.png" />
 </head>
 <body class="body">
  <header class="nav-color">
     <div class="navbar-header">
-    <a class="navbar-brand" href="#">American Care</a>
+    <a class="navbar-brand" href="index.html"><img src="favicon.png" alt="logo"></a>
     </div>
      <ul class="nav navbar-head">
       <li class="navbar-brand nav-text">About Us</li>
@@ -20,8 +21,8 @@
      </ul>
     </header>
 
-     <main class="cf-app-width">
-     <div class="jumbotron jumbotron-margin logos">
+     <main class="container content home logos">
+     <div class="jumbotron jumbotron-margin ">
      <h2 class="alt-h1 lh-condensed mt-3 mb-2 text-center">
      Welcome to American Care
     </h2>
@@ -32,7 +33,7 @@
 <div class="row">
         <div class="col-md-5">
           <h1 class="text-left">Connect with us</h1>
-          <h3 class="text-left">Your search for Telemedicine ends here.</h3>
+          <h3 class="text-left text-type">Your search for Telemedicine ends here.</h3>
 
           <p>For more than 10 years, American Care has served as a trusted 
           advocate and strategic advisor to thousands of physicians and hospitals. 
@@ -41,7 +42,7 @@
           operational and clinical insights that can help ensure your continued success.
           Take a moment to connect and stay informed.</p>
 
-          <a class="btn btn-large btn-success button-border" href="/get-started.html" property="dc:title">Let's Connect</a>
+          <a class="btn btn-large btn-success button-border" href="/get-started.html" property="dc:title">Connect</a>
           <br />
         </div>
 
@@ -72,8 +73,7 @@
           <p>Seeing a doctor online can save you time and money.Virtual doctor visits are rapidly gaining popularity these days as more health insurers offer telemedicine services to help cut costs. At American Care we have made to easy to virtually consult a doctor at any time</p>
           <br/>
          <h4 class="text-left text-type">Web</h4>
-             <p>Prefer to have a visit from your computer? No problem.
-              Log onto your account at www.americancare.com and see a doctor in minutes.</p>
+             <p>Prefer to have a visit from your computer? No problem. Login to your account at<a href="#"> www.americancare.com</a> and see a doctor in minutes.</p>
               <a class="btn btn-large btn-success button-border" href="/get-started.html" property="dc:title">Login</a>
         </div>
 
@@ -82,7 +82,7 @@
         <ul>
         <li>Video Consultation</li>
         <li>Phone Consultation</li>
-        <li>24 hr Availabilty</li>
+        <li>Online Consultation</li>
         </ul>
         </div>
     </div>
@@ -93,11 +93,26 @@
 <div class="content_alt">
   <section class="container content home">
     <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-left">The future is here</h1>
-        <p class="alt-h4 text-normal text-gray text-center contact-p">
-      The complete Labeled Telemedince Solution.
-      </p>
+      <div id="id01" class="col-md-12 form-content">
+        <h1 class="text-center">Contact Us</h1>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+         <form action="/action_page.php">
+          <label for="lname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="lname">Last Name</label>
+       <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+       <label for="lname">Email</label>
+       <input type="text" id="email" name="email" placeholder="Enter email" required>
+       <label for="state">State</label>
+       <select id="state" name="country">
+       <option value="maryland">Maryland</option>
+        <option value="newyork">Newyork</option>
+      <option value="texas">Texas</option>
+    </select>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write Your Message." style="height:150px" required></textarea>
+    <input class="btn btn-large button-border" type="submit" value="Send Message">
+  </form>
       </div>
     </div>
   </section>
@@ -110,7 +125,7 @@
        <ul class="nav navbar-nav">
          <li class="navbar-brand footer-text ">Support</li>
          <li class="navbar-brand footer-text ">FAQs</li>
-       <li class="navbar-brand footer-text ">Contact</li>
+       <li class="navbar-brand footer-text onclick="document.getElementById('id01').style.display='block'>Contact</li>
       </ul>
     </nav>
   </div>
