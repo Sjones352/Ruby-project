@@ -351,11 +351,19 @@ input[type=submit]:hover {
 }
 .form-content {
   width: 40% !important;
-  background-color: #005C8B;
+  background-color: #CADAE3;
   margin: 1% auto 5% auto;
   border: 1px solid #888;
   padding-right: 25px;
   padding-left: 25px;
-  padding-down: 25px;
   padding-bottom: 25px;
 }
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+
