@@ -2,14 +2,40 @@
 
 // Base object Animal
 // method walk with parameters numSteps
-function Animal() {
+var Animal = function () {
+
+    this.stepsWalked = 0;
+    this.name = "some animal"
+    this.walk = function (steps) {
+      this.stepsWalked += steps;
+      console.warn(this.name, " walked ", steps);
+    }
+
+    return this;
+};
+
+function Donkey(name) {
+  this.name = "Donkey called " + name;
+  return this;
 }
+Donkey.prototype = Object.create(new Animal())
 
-Animal.prototype.walk = function(numSteps) {
-  console.log('I am walking', numSteps);
- };
+var donkey = new Donkey("bob");
+var snake = new Animal();
 
-var stepsWalked = new Animal();
+console.warn(donkey.walk(100));
+console.warn(donkey.stepsWalked);
+console.warn(donkey.walk(20));
+console.warn(donkey.stepsWalked);
+console.warn(donkey.walk(20));
+console.warn(donkey.stepsWalked);
 
-console.log(stepsWalked.walk(3));
+snake.prototype = new Donkey("woa");
 
+console.warn(snake.prototype.walk(30));
+console.warn(snake.stepsWalked);
+
+snake.prototype = new Donkey("woa");
+
+console.warn(snake.prototype.walk(30));
+console.warn(snake.stepsWalked);
