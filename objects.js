@@ -1,41 +1,59 @@
 'use strict';
 
-// Base object Animal
-// method walk with parameters numSteps
-var Animal = function () {
-
-    this.stepsWalked = 0;
-    this.name = "some animal"
-    this.walk = function (steps) {
-      this.stepsWalked += steps;
-      console.warn(this.name, " walked ", steps);
-    }
-
-    return this;
+var Animal = function() {
+  this.stepsWalked = 0;
+  this.walk = function(steps) {
+    this.stepsWalked += steps;
+    console.log("I am walking ", steps);
+  }
+  return this;
 };
 
-function Donkey(name) {
-  this.name = "Donkey called " + name;
-  return this;
+function Dog() {
+  Animal.call(this);
 }
-Donkey.prototype = Object.create(new Animal())
 
-var donkey = new Donkey("bob");
-var snake = new Animal();
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
 
-console.warn(donkey.walk(100));
-console.warn(donkey.stepsWalked);
-console.warn(donkey.walk(20));
-console.warn(donkey.stepsWalked);
-console.warn(donkey.walk(20));
-console.warn(donkey.stepsWalked);
+Dog.prototype.wagTail = function() {
+  for (var i = 1; i <= 10; i++) {
+    setTimeout(function timer() {
+      console.log('waggle');
+    }, i * 3000);
+  }
+}
 
-snake.prototype = new Donkey("woa");
+function Cat() {
+  Animal.call(this);
+}
 
-console.warn(snake.prototype.walk(30));
-console.warn(snake.stepsWalked);
+Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
 
-snake.prototype = new Donkey("woa");
+Cat.prototype.reactToPetting = function() {
+  var x = 10;
+  var rand = Math.floor((Math.random() * x) + 1);
+  console.log('randon number is', rand);
+  if (rand < 5) {
+    console.log('Mrow');
+  } else if (rand === 5) {
+    console.log('prrrrrrrrrrr');
+  } else if (rand > 5) {
+    console.log('Meh. I am ignoring you and walking away');
+  }
+}
 
-console.warn(snake.prototype.walk(30));
-console.warn(snake.stepsWalked);
+var walked = new Dog();
+walked.walk(100);
+console.log(walked.stepsWalked);
+walked.walk(20);
+console.log(walked.stepsWalked);
+walked.walk(20);
+console.log(walked.stepsWalked);
+
+var dog = new Dog();
+dog.wagTail();
+
+var cat = new Cat();
+cat.reactToPetting();
