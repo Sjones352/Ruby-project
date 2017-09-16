@@ -1,15 +1,31 @@
 'use strict';
 
-// Base object Animal
-// method walk with parameters numSteps
 function Animal() {
+	this.stepsWalked = 0;
 }
 
-Animal.prototype.walk = function(numSteps) {
-  console.log('I am walking', numSteps);
- };
+Animal.prototype.walk = function(steps) {
+	this.stepsWalked += steps;
+	console.log('I am walking', steps);
+	return this;
+}
 
-var stepsWalked = new Animal();
+var move = new Animal();
+move.walk(3);
 
-console.log(stepsWalked.walk(3));
+function Dog() {
+	Animal.call(this);
+}
 
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.wagTail = function() {
+  for (var i= 1; i <= 5; i++) {
+	 console.log('silly');
+  }
+
+}
+
+var shit = new Dog('waggle');
+		shit.wagTail();

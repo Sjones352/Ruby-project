@@ -1,16 +1,16 @@
 'use strict';
 
-var t1 = 'myVar'; // defined
-var t2; // undefined
+var t1 = 5; // defined
+var t2 = 10; // undefined
 var t3 = process.argv[2];
 var num = Number.parseInt(t3);
 var t4 = 7;
 
 
-if (t1 === undefined) {
-  console.log('t1 is undefined');
+if (t2 % t1) {
+  console.log('Frizz');
 } else {
-  console.log('t1 is defined');
+  console.log('Buzz');
 }
 
 if (t2 === undefined) {
@@ -31,3 +31,10 @@ if (t4 === 7) {
 } else if (t4 == '7') {
   console.log('This is false');
 }
+
+ 
+ var i= 1;
+
+for (var i = 1; i <= 100; i++) {
+	console.log( i);
+} 
